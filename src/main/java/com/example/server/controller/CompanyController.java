@@ -44,16 +44,16 @@ public class CompanyController {
     }
 
 
-    @DeleteMapping("/companies/{id}")
+    @DeleteMapping("/delete/{id}")
     public HttpStatus deleteCompany(@PathVariable int id) {
         Company a = repository.getOne(id);
-        repository.delete(a);
         deleteAddress(id);
+        repository.delete(a);
 
         return HttpStatus.OK;
     }
 
-    @DeleteMapping("/companies/{id}")
+    @DeleteMapping("/deleteaddress/{id}")
     public HttpStatus deleteAddress(@PathVariable int id) {
         CompanyAddress a = arepository.getOne(id);
         arepository.delete(a);

@@ -28,10 +28,10 @@ public class Company {
 
    public Company(){}
 
-   public Company(String name, CompanyAddress address) {
+   public Company(String name/*, CompanyAddress address*/) {
         this.name = name;
         this.address = address;
-        //this.address.(this);
+
 
     }
 
@@ -53,7 +53,7 @@ public class Company {
 
     @Override
     public String toString() {
-        return "Company [id=" + id + ", [name=" + name +"]";
+        return "Company [id=" + id + ", name=" + name + ", address=" + address +"]";
 
     }
 
