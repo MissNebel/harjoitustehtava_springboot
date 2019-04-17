@@ -1,14 +1,9 @@
 package com.example.server.model;
 
-
-import org.apache.tomcat.jni.Address;
-
 import javax.persistence.*;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 @Entity                             //Entity-luokka, että täällä olevat asiat voidaan tallentaa tietokantaan
 
@@ -28,11 +23,9 @@ public class Company {
 
    public Company(){}
 
-   public Company(String name/*, CompanyAddress address*/) {
+   public Company(String name, CompanyAddress address) {
         this.name = name;
         this.address = address;
-
-
     }
 
     public int getId() {
